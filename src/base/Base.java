@@ -101,7 +101,70 @@ public int getCount(String table){
 	
 }
 
-//-------
+public String[] listKrok(){
+	ArrayList <String> list = new ArrayList();
+	String[] txt = null;
+	try {
+		statement = connection.createStatement();
+		resultSet = statement.executeQuery("SELECT krok FROM kroks;");
+		while (resultSet.next()) {
+			list.add( resultSet.getString(1));
+		}
+		resultSet.close();
+		statement.close();
+		txt=new String[list.size()];
+		for(int t = 0;t<list.size();t++){
+			txt[t]=list.get(t);
+		}
+		
+	} catch (SQLException ew) {
+		ew.printStackTrace();
+	}
+	return txt;
+}
+public String[] listSpecialnost(){
+	ArrayList <String> list = new ArrayList();
+	String[] txt = null;
+	try {
+		statement = connection.createStatement();
+		resultSet = statement.executeQuery("SELECT profession FROM professions;");
+		while (resultSet.next()) {
+			list.add( resultSet.getString(1));
+		}
+		resultSet.close();
+		statement.close();
+		txt=new String[list.size()];
+		for(int t = 0;t<list.size();t++){
+			txt[t]=list.get(t);
+		}
+		
+	} catch (SQLException ew) {
+		ew.printStackTrace();
+	}
+	return txt;
+}
+
+public String[] listBase(){
+	ArrayList <String> list = new ArrayList();
+	String[] txt = null;
+	try {
+		statement = connection.createStatement();
+		resultSet = statement.executeQuery("SELECT base FROM bases;");
+		while (resultSet.next()) {
+			list.add( resultSet.getString(1));
+		}
+		resultSet.close();
+		statement.close();
+		txt=new String[list.size()];
+		for(int t = 0;t<list.size();t++){
+			txt[t]=list.get(t);
+		}
+	} catch (SQLException ew) {
+		ew.printStackTrace();
+	}
+	return txt;
+}
+//----------------------------------------------------------------
 
 
 public void save(String obraschenieKBase ){

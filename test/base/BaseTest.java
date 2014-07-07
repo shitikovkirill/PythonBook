@@ -9,6 +9,12 @@ import org.junit.Test;
 
 public class BaseTest {
 Base base = Base.getBase();
+@Test
+public void test3() {
+	String st[] = base.listKrok();
+	System.out.println("ttttttttttt"+st[1]);
+}
+
 	@Test
 	public void test() {
 		
