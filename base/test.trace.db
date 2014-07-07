@@ -1,0 +1,478 @@
+07-06 18:21:12 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "CREATE TABLE TESTS(
+TEST_ID MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+KROK_ID SMALLINT UNSIGNED ,
+PROFESSION_ID SMALLINT UNSIGNED ,
+DISCIPLINES_ID SMALLINT UNSIGNED
+BASE_ID[*] SMALLINT UNSIGNED ,
+ASK TEXT, 
+VARIANT_A VARCHAR,
+VARIANT_B VARCHAR,
+ VARIANT_C VARCHAR,
+  VARIANT_D VARCHAR,
+  VARIANT_E VARCHAR
+PRIMARY KEY(TEST_ID),
+INDEX(ASK )
+) "; ожидалось "NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE TESTS(
+TEST_ID MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+KROK_ID SMALLINT UNSIGNED ,
+PROFESSION_ID SMALLINT UNSIGNED ,
+DISCIPLINES_ID SMALLINT UNSIGNED
+BASE_ID[*] SMALLINT UNSIGNED ,
+ASK TEXT, 
+VARIANT_A VARCHAR,
+VARIANT_B VARCHAR,
+ VARIANT_C VARCHAR,
+  VARIANT_D VARCHAR,
+  VARIANT_E VARCHAR
+PRIMARY KEY(TEST_ID),
+INDEX(ASK )
+) "; expected "NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE Tests(
+test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+krok_id SMALLINT UNSIGNED ,
+profession_id SMALLINT UNSIGNED ,
+disciplines_id SMALLINT UNSIGNED
+base_id SMALLINT UNSIGNED ,
+ask TEXT, 
+variant_a VARCHAR,
+variant_b VARCHAR,
+ variant_c VARCHAR,
+  variant_d VARCHAR,
+  variant_e VARCHAR
+PRIMARY KEY(test_id),
+INDEX(ask )
+) [42001-173]
+07-06 18:21:45 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "CREATE TABLE TESTS(
+TEST_ID MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+KROK_ID SMALLINT UNSIGNED ,
+PROFESSION_ID SMALLINT UNSIGNED ,
+DISCIPLINES_ID SMALLINT UNSIGNED
+BASE_ID[*] SMALLINT UNSIGNED ,
+ASK TEXT, 
+VARIANT_A VARCHAR,
+VARIANT_B VARCHAR,
+ VARIANT_C VARCHAR,
+  VARIANT_D VARCHAR,
+  VARIANT_E VARCHAR,
+PRIMARY KEY(TEST_ID),
+INDEX(ASK )
+) "; ожидалось "NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE TESTS(
+TEST_ID MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+KROK_ID SMALLINT UNSIGNED ,
+PROFESSION_ID SMALLINT UNSIGNED ,
+DISCIPLINES_ID SMALLINT UNSIGNED
+BASE_ID[*] SMALLINT UNSIGNED ,
+ASK TEXT, 
+VARIANT_A VARCHAR,
+VARIANT_B VARCHAR,
+ VARIANT_C VARCHAR,
+  VARIANT_D VARCHAR,
+  VARIANT_E VARCHAR,
+PRIMARY KEY(TEST_ID),
+INDEX(ASK )
+) "; expected "NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE Tests(
+test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+krok_id SMALLINT UNSIGNED ,
+profession_id SMALLINT UNSIGNED ,
+disciplines_id SMALLINT UNSIGNED
+base_id SMALLINT UNSIGNED ,
+ask TEXT, 
+variant_a VARCHAR,
+variant_b VARCHAR,
+ variant_c VARCHAR,
+  variant_d VARCHAR,
+  variant_e VARCHAR,
+PRIMARY KEY(test_id),
+INDEX(ask )
+) [42001-173]
+07-06 18:22:01 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE Tests(
+test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+krok_id SMALLINT UNSIGNED ,
+profession_id SMALLINT UNSIGNED ,
+disciplines_id SMALLINT UNSIGNED,
+base_id SMALLINT UNSIGNED ,
+ask TEXT, 
+variant_a VARCHAR,
+variant_b VARCHAR,
+ variant_c VARCHAR,
+  variant_d VARCHAR,
+  variant_e VARCHAR,
+PRIMARY KEY(test_id),
+INDEX(ask )
+) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:22:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE Tests(
+test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+krok_id SMALLINT UNSIGNED ,
+profession_id SMALLINT UNSIGNED ,
+disciplines_id SMALLINT UNSIGNED,
+base_id SMALLINT UNSIGNED ,
+ask TEXT, 
+variant_a VARCHAR,
+variant_b VARCHAR,
+ variant_c VARCHAR,
+  variant_d VARCHAR,
+  variant_e VARCHAR,
+PRIMARY KEY(test_id),
+INDEX(ask )
+) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:22:53 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE Tests( test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT, krok_id SMALLINT UNSIGNED ,
+profession_id SMALLINT UNSIGNED ,
+disciplines_id SMALLINT UNSIGNED,
+base_id SMALLINT UNSIGNED ,
+ask TEXT, 
+variant_a VARCHAR,
+variant_b VARCHAR,
+ variant_c VARCHAR,
+  variant_d VARCHAR,
+  variant_e VARCHAR,
+PRIMARY KEY(test_id),
+INDEX(ask )
+) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:23:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "MALLINT"
+Unknown data type: "MALLINT"; SQL statement:
+CREATE TABLE Tests( test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT, krok_id SMALLINT UNSIGNED , profession_id SMALLINT UNSIGNED , disciplines_id SMALLINT UNSIGNED, base_id  MALLINT UNSIGNED , ask TEXT, variant_a VARCHAR, variant_b VARCHAR,  variant_c VARCHAR,   variant_d VARCHAR,   variant_e VARCHAR, PRIMARY KEY(test_id), INDEX(ask )  ) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:24:39 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE Tests( test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT, krok_id SMALLINT UNSIGNED , profession_id SMALLINT UNSIGNED , disciplines_id SMALLINT UNSIGNED, base_id  SMALLINT UNSIGNED , ask TEXT, variant_a VARCHAR, variant_b VARCHAR,  variant_c VARCHAR,   variant_d VARCHAR,   variant_e VARCHAR, PRIMARY KEY(test_id), INDEX(ask )  ) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:25:09 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE Tests( test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT, krok_id SMALLINT UNSIGNED , profession_id SMALLINT UNSIGNED , disciplines_id SMALLINT UNSIGNED, base_id SMALLINT UNSIGNED , ask TEXT, variant_a VARCHAR, variant_b VARCHAR,  variant_c VARCHAR,   variant_d VARCHAR,   variant_e VARCHAR, PRIMARY KEY(test_id), INDEX(ask )  ) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:26:00 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE Tests( test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT, krok_id SMALLINT UNSIGNED , profession_id SMALLINT UNSIGNED , disciplines_id SMALLINT UNSIGNED, base_id SMALLINT UNSIGNED , ask TEXT, variant_a VARCHAR(255), variant_b VARCHAR(255),  variant_c VARCHAR(255),   variant_d VARCHAR(255),   variant_e VARCHAR(255), PRIMARY KEY(test_id), INDEX(ask )  ) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:26:22 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE Tests ( test_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT, krok_id SMALLINT UNSIGNED , profession_id SMALLINT UNSIGNED , disciplines_id SMALLINT UNSIGNED, base_id SMALLINT UNSIGNED , ask TEXT, variant_a VARCHAR(255), variant_b VARCHAR(255),  variant_c VARCHAR(255),   variant_d VARCHAR(255),   variant_e VARCHAR(255), PRIMARY KEY(test_id), INDEX(ask )  ) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:28:18 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE invoices ( invoice_id SMALLINT(4) UNSIGNED NOT NULL AUTO_INCREMENT, client_id SMALLINT(3) UNSIGNED, invoice_date DATE NOT NULL, invoice_amount DECIMAL(10,2) UNSIGNED NOT NULL, invoice_description TINYTEXT, PRIMARY KEY(invoice_id), INDEX(invoice_date) ) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 18:28:35 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Неизвестный тип данных: "("
+Unknown data type: "("; SQL statement:
+CREATE TABLE invoices (invoice_id SMALLINT(4) UNSIGNED NOT NULL AUTO_INCREMENT, client_id SMALLINT(3) UNSIGNED, invoice_date DATE NOT NULL, invoice_amount DECIMAL(10,2) UNSIGNED NOT NULL, invoice_description TINYTEXT, PRIMARY KEY(invoice_id), INDEX(invoice_date) ) [50004-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3723)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3586)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:5318)
+	at org.h2.command.Parser.parseCreate(Parser.java:3873)
+	at org.h2.command.Parser.parsePrepared(Parser.java:324)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:428)
+	at org.h2.engine.Session.prepareCommand(Session.java:377)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+07-06 22:15:52 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "SELSCT[*] * FROM KROKS "; ожидалось "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"
+Syntax error in SQL statement "SELSCT[*] * FROM KROKS "; expected "SELECT, SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW, {"; SQL statement:
+selsct * from KROKS [42001-173]
+07-06 22:17:39 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "INSERT INTO KROKS VALUE[*] (NULL, ""Крок 1"") "; ожидалось "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, SELECT, FROM"
+Syntax error in SQL statement "INSERT INTO KROKS VALUE[*] (NULL, ""Крок 1"") "; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, SELECT, FROM"; SQL statement:
+insert into kroks value (null, "Крок 1") [42001-173]
+07-06 22:18:23 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "INSERT INTO KROKS VALUE[*] (NULL, 'Крок 1') "; ожидалось "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, SELECT, FROM"
+Syntax error in SQL statement "INSERT INTO KROKS VALUE[*] (NULL, 'Крок 1') "; expected "., (, DIRECT, SORTED, DEFAULT, VALUES, SET, (, SELECT, FROM"; SQL statement:
+insert into kroks value (null, 'Крок 1') [42001-173]
+07-07 10:34:30 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "BASE" не найдена
+Table "BASE" not found; SQL statement:
+select count(*) from base; [42102-172]
+07-07 10:35:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "BASE" не найдена
+Table "BASE" not found; SQL statement:
+select count(*) from base; [42102-172]
+07-07 11:03:47 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "EXPENSES" не найдена
+Table "EXPENSES" not found; SQL statement:
+SELECT DISCIPLINE FROM expenses WHERE KROK_ID = 1 and PROFESSION_ID = 2 and BASE_ID = 2 ; [42102-172]
+07-07 11:06:25 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "SELECT  FROM DISCIPLINES WHERE[*] KROK_ID = 1 AND PROFESSION_ID = 2 AND BASE_ID = 2 ; "; ожидалось "., (, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"
+Syntax error in SQL statement "SELECT  FROM DISCIPLINES WHERE[*] KROK_ID = 1 AND PROFESSION_ID = 2 AND BASE_ID = 2 ; "; expected "., (, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT  FROM DISCIPLINEs WHERE KROK_ID = 1 and PROFESSION_ID = 2 and BASE_ID = 2 ; [42001-172]
+07-07 11:44:20 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "KROKS" не найден
+Column "KROKS" not found; SQL statement:
+SELECT * FROM KROKS  WHERE kroks =1; [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at base.Base.extractionText(Base.java:73)
+	at base.BaseTest.extractionTextText(BaseTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+07-07 11:46:39 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Ошибка преобразования данных при конвертации "Крок 1"
+Data conversion error converting "Крок 1"; SQL statement:
+SELECT * FROM kroks  WHERE krok =1; [22018-172]
+07-07 11:56:41 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Ошибка преобразования данных при конвертации "Крок 1"
+Data conversion error converting "Крок 1"; SQL statement:
+SELECT * FROM kroks  WHERE krok =1; [22018-172]
