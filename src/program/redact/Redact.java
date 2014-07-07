@@ -85,10 +85,10 @@ public class AddButtonListener implements ActionListener {
 
 	    switch (selection) {
 	    case JOptionPane.OK_OPTION:
-	    	System.out.println(choise.getKrokID());
-	    	System.out.println(choise.getSpecialnostID()
-	    			
-	    			);
+	    	int krokID =choise.getKrokID();
+	    	int specialnostID = choise.getSpecialnostID();
+	    	int baseID = choise.getBaseID();
+	    	String testName = choise.getTestName();
 	      System.out.println("OK_OPTION");
 	      
 	      break;

@@ -64,6 +64,9 @@ public class Choise extends JPanel {
 	public int getBaseID(){
 		return comboBox_istochnick.getSelectedIndex()+1;
 	}
+	public String getTestName(){
+		return textField.getText();
+	}
 
 	private void getDataFoCheckBox() {
 		ekzamen = base.listKrok();
