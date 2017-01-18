@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 import unittest
 
 class TestStringMethods(unittest.TestCase):
@@ -24,7 +25,7 @@ class TestStringMethods(unittest.TestCase):
     def test_dobavlenie(self):
         a = []
 
-        a = a + [22]
+        a += [22]
         self.assertEqual([22], a)
 
         a.append('cc')

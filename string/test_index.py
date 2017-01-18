@@ -3,16 +3,6 @@ import unittest
 class TestStringMethods(unittest.TestCase):
 
     def test_base(self):
-        print 'string \'"'  # 1 = 2
-        print "string '\""
-        print '''string'''  # 3 = 4
-        print """string"""
-
-        a = '''this
-        is ' "
-        string'''
-
-        print a
 
         a = 'string' ' test'
         self.assertTrue(a, 'string test')
@@ -21,19 +11,17 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue(a == 'string test')
 
     def test_strin_as_array(self):
-        print '-------------'
         a = 'string test'
-        self.assertEqual(a[0], 's')
+        self.assertEqual('s', a[0])
         # error a[0]='h'
-        print a[0:3]
-        print a[3:]
-        print a[:4]
-        print a[-1]
-        print a[-33:300]
-        print a[300:-33]
 
-        print '-------------'
-        print len(a)
+        self.assertEqual('str', a[0:3])
+        self.assertEqual('ing test', a[3:])
+        self.assertEqual('stri', a[:4])
+        self.assertEqual('t', a[-1])
+        self.assertEqual('string test', a[-33:300])
+        self.assertEqual('', a[300:-33])
+        self.assertEqual(11, len(a))
 
     def test_upper(self):
         self.assertEqual('foo'.upper(), 'FOO')

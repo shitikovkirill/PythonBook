@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 import unittest
 
-class TestStringMethods(unittest.TestCase):
+class TestCortegeMethods(unittest.TestCase):
     def test_criation(self):
         t = 12345, 54321, 'hello!'
         self.assertEqual(12345, t[0])
@@ -11,9 +12,11 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(((12345, 54321, 'hello!'),(1, 5, 'hello2!')), u)
 
         empty = ()
-        print empty
-        a =(22,)
-        print a
+        self.assertEqual(0, len(empty))
+
+        empty =(22,)
+        self.assertEqual(1, len(empty))
+        self.assertEqual(22, empty[0])
 
     def test_rasspakovka(self):
         t = 12345, 54321, 'hello!'

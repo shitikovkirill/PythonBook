@@ -16,7 +16,7 @@ def generate_catalog_linc(tab_id, product_id):
 class TestStringMethods(unittest.TestCase):
 
     def test_base(self):
-        print(generate_catalog_linc(23123, 11111))
+        self.assertEqual('https://catalog.delmarintl.ca/?tabId=23123#/product/11111/1/false/sales/{"period":"quarter","size":"all"}', generate_catalog_linc(23123, 11111))
 
     def test_return_empty_string(self):
         self.assertEqual('', generate_catalog_linc(False, 11111))

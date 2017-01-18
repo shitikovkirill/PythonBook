@@ -1,6 +1,7 @@
+from __future__ import absolute_import
 import unittest
 
-class TestStringMethods(unittest.TestCase):
+class TestFunctionMethods(unittest.TestCase):
     def test_unpacking(self):
         args = [3, 6]
         range_var = range(*args)
