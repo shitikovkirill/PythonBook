@@ -13,8 +13,3 @@ class MyPrompt(Cmd):
         """Quits the program."""
         print "Quitting."
         raise SystemExit
-
-if __name__ == '__main__':
-    prompt = MyPrompt()
-    prompt.prompt = '> '
-    prompt.cmdloop('Starting prompt...')

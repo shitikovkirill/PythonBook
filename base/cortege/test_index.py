@@ -2,7 +2,7 @@ from __future__ import absolute_import
 import unittest
 
 class TestCortegeMethods(unittest.TestCase):
-    def test_criation(self):
+    def test_creation(self):
         t = 12345, 54321, 'hello!'
         self.assertEqual(12345, t[0])
 

@@ -22,9 +22,3 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual('', generate_catalog_linc(False, 11111))
         self.assertEqual('', generate_catalog_linc(312312, False))
         self.assertEqual('', generate_catalog_linc(False, False))
-
-
-if __name__ == '__main__':
-    unittest.main()
-
-

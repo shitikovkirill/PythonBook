@@ -45,17 +45,4 @@ class TestStringMethods(unittest.TestCase):
         prefix = 'Py'
         str = prefix + 'thon'
         # prefix 'thon' error
-        self.assertEqual('Python', str);
-
-
-if __name__ == '__main__':
-    unittest.main()
-
-
-
-
-
-
-
-
-
+        self.assertEqual('Python', str)
