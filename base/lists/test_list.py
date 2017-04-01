@@ -4,7 +4,7 @@ import unittest
 class TestListMethods(unittest.TestCase):
 
     def test_append(self):
-        list = [24,58,234,89,34]
+        list = [24, 58, 234, 89, 34]
 
         list.append('item')
 
@@ -17,16 +17,24 @@ class TestListMethods(unittest.TestCase):
         self.assertEqual('item2', list[6])
 
     def test_extend(self):
+        # 1
         list = [24, 58, 234, 89, 34]
         list2 = ['item', 'item2']
 
         list.extend(list2)
         self.assertEqual([24, 58, 234, 89, 34, 'item', 'item2'], list)
 
+        # 2
         list = [24, 58, 234, 89, 34]
         list2 = ['item', 'item2']
 
         list[len(list):] = list2
+        self.assertEqual([24, 58, 234, 89, 34, 'item', 'item2'], list)
+
+        # 3
+        list = [24, 58, 234, 89, 34]
+        list2 = ['item', 'item2']
+        list += list2
         self.assertEqual([24, 58, 234, 89, 34, 'item', 'item2'], list)
 
     def test_insert(self):
@@ -37,6 +45,9 @@ class TestListMethods(unittest.TestCase):
 
         list.insert(4, 'test2')
         self.assertEqual('test2', list[4])
+
+        list.insert(4000, 'test3')
+        self.assertEqual('test3', list[-1])
 
     def test_remove(self):
         list = [24, 58, 234, 89, 34]
@@ -95,3 +106,15 @@ class TestListMethods(unittest.TestCase):
         list.reverse()
 
         self.assertEqual([24, 34, 89, 234, 58, 24], list)
+
+    def test_dell(self):
+        list = [24, 58, 234, 89, 34, 24]
+        del list[1:]
+        self.assertEqual([24], list)
+
+    def test_in(self):
+        list = [24, 58, 234, 89, 34, 24]
+        self.assertTrue(24 in list)
+
+if __name__ == '__main__':
+    unittest.main()
