@@ -52,11 +52,11 @@ class TestListMethods(unittest.TestCase):
     def test_remove(self):
         list = [24, 58, 234, 89, 34]
 
-        list.remove(24);
+        list.remove(24)
         self.assertEqual(58, list[0])
 
         with self.assertRaises(ValueError):
-            list.remove(0);
+            list.remove(0)
 
     def test_pop(self):
         list = [24, 58, 234, 89, 34]

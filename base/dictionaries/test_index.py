@@ -33,3 +33,46 @@ class TestDictionariesMethods(unittest.TestCase):
 
         self.assertEqual({'sape': 4139, 'jack': 4098, 'guido': 4127}, result)
 
+    def test_create2(self):
+        lot = [['a', 'b'], ['c', 'd'], ['e', 'f']]
+
+        self.assertEqual({'a': 'b', 'c': 'd', 'e': 'f'}, dict(lot))
+
+    def test_create3(self):
+        lot = {'a': 'luz', 'b': 'hbn', 'r': 'nvz', 'a': 'aaa'}
+        self.assertEqual({'a': 'aaa', 'b': 'hbn', 'r': 'nvz'}, lot)
+
+    def test_update(self):
+        pythons = {'a': 'rr', 'b': 'gg'}
+        others = {'g': 'hh'}
+        pythons.update(others)
+        self.assertEqual({'a': 'rr', 'b': 'gg', 'g': 'hh'}, pythons)
+
+        others2 = {'g': 'hh', 'b': 'hh'}
+        pythons.update(others2)
+        self.assertEqual({'a': 'rr', 'b': 'hh', 'g': 'hh'}, pythons)
+
+    def test_clear(self):
+        pythons = {'a': 'rr', 'b': 'gg'}
+        pythons.clear()
+        self.assertEqual({}, pythons)
+
+    def test_get(self):
+        pythons = {'a': 'rr', 'b': 'gg'}
+        self.assertEqual('rr', pythons['a'])
+
+        with self.assertRaises(KeyError):
+            pythons['d']
+
+        self.assertFalse('d' in pythons)
+
+    def test_get(self):
+        pythons = {'a': 'rr', 'b': 'gg'}
+
+        self.assertEqual('rr', pythons.get('a'))
+        self.assertEqual('yra!!', pythons.get('t', 'yra!!'))
+        self.assertEqual(None, pythons.get('t'))
+
+
+if __name__ == '__main__':
+    unittest.main()
