@@ -31,9 +31,9 @@ class TestCortegeMethods(unittest.TestCase):
         one_el = 'one',
         multi = 'one', '2', '3'
 
-        print empty
-        print one_el
-        print multi
+        print(empty)
+        print(one_el)
+        print(multi)
 
     def test_tuple(self):
         m_list = ['Test', 'Test2', 'Text3']
