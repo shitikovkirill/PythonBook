@@ -12,6 +12,10 @@ class TestListMethods(unittest.TestCase):
 
         self.assertEqual(['a/b', 'c/d', '/e'], splitme.split('//'))
 
+    def test_join(self):
+        join_str = "', '".join(['ff', 'tt', 'th'])
+        self.assertEqual("ff', 'tt', 'th", join_str)
+
 
 if __name__ == '__main__':
     unittest.main()
