@@ -8,7 +8,8 @@ print(f(3))
 
 print('---------------------------------------------------')
 
-def f(a, L=None):
+
+def f(a, L = None):
     if L is None:
         L = []
     L.append(a)
@@ -19,6 +20,7 @@ print(f(2))
 print(f(3))
 
 print('---------------------------------------------------')
+
 
 def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
     print("-- This parrot wouldn't", action, ' ')
@@ -34,6 +36,7 @@ parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
 parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
 
 print('---------------------------------------------------')
+
 
 def cheeseshop(kind, *arguments, **keywords):
     print("-- Do you have any", kind, "?")

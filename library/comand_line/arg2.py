@@ -11,5 +11,5 @@ class MyPrompt(Cmd):
 
     def do_quit(self, args):
         """Quits the program."""
-        print "Quitting."
+        print("Quitting.")
         raise SystemExit
