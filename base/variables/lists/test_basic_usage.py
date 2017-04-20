@@ -52,9 +52,17 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(22, b)
         self.assertEqual(['ww'], a)
 
-    def test_cange_list(self):
+    def test_change_list(self):
         a = [1, 5, 7, 13, 22]
 
         b = [elem*2 for elem in a]
 
         self.assertEqual([2, 10, 14, 26, 44], b)
+
+    def test_tuple_to_list(self):
+        t = 'one', 'two', 'three'
+        l = list(t)
+        self.assertEqual(['one', 'two', 'three'], l)
+
+if __name__ == '__main__':
+    unittest.main()
