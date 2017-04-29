@@ -5,23 +5,33 @@ import unittest
 class TestRegexp(unittest.TestCase):
 
     def test_regexp(self):
-        orders_str = '50 orders: IC2200026658-0, [STK13705316-0, WMT488056569-0], STK13705316-1 WARNING! 3 orders have not been processed and printed: CSD500200646386-0, [IC2200027021-0, CSD500200646387-0] '
+        orders_str = '8 combined orders: [PUPDL141103.X2_5X1-0R, PUPDL141103X2_4X1-0R], [PUPDL141104X24X1-0, PUPDL141104X25X1-0]'
         result = self.get_orders_list_from_string(orders_str)
-        self.assertEqual(['IC2200026658-0', 'STK13705316-0', 'WMT488056569-0', 'STK13705316-1', 'WARNING', 'CSD500200646386-0', 'IC2200027021-0', 'CSD500200646387-0', ''],
+        self.assertEqual(['PUPDL141103.X2_5X1-0R', 'PUPDL141103X2_4X1-0R', 'PUPDL141104X24X1-0', 'PUPDL141104X25X1-0'],
                          result)
 
         result = self.get_orders_list_from_string('')
-        self.assertEqual([''], result)
+        self.assertEqual([], result)
 
         result = self.get_orders_list_from_string('dfsd dsfsdf')
-        self.assertEqual([''], result)
+        self.assertEqual([], result)
 
     def get_orders_list_from_string(self, string):
-        regex = re.compile(r"(?<=:\s)(?P<orders_list>\[?[\w-]*,?\s*\]?){1,}")
+        regex = re.compile(r"(?<=:\s)(?P<orders_list>\[?[A-Z\d\-\._]{4,}[,?\s\]]?,?\s*){1,}")
         list_of_orders = regex.finditer(string)
         orders_str = ', '.join([value.group(0) for value in list_of_orders])
         orders_str = re.sub('\[|\]', '', orders_str)
-        return re.split('\s*,?\s+', orders_str)
+        orders = re.split('\s*,?\s+', orders_str)
+        new_orders = []
+        for order in orders:
+            letter = re.search(r"[A-Z]", order)
+            number = re.search(r"\d", order)
+            dash   = re.search(r"-", order)
+
+            if not (letter and number and dash):
+                continue
+            new_orders.append(order)
+        return new_orders
 
     def test_format(self):
 
