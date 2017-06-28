@@ -1,2 +1,4 @@
 .idea
 /venv
+/library/email/alarm_error/archive.log
+/library/email/error.log
