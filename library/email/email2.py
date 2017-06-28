@@ -33,6 +33,8 @@ def send_email(user, pwd, recipient, subject, body):
         print('successfully sent the mail')
     except:
         print("failed to send mail")
+
+
 if __name__ == '__main__':
 
     user = 'superliv.no@gmail.com'
