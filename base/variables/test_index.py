@@ -14,5 +14,13 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual('Trondheim', non_null)
         self.assertIsNotNone(non_null)
 
+    def test_d(self):
+        try:
+            myVar
+        except NameError:
+            myVar = None
+
+        self.assertIsNone(myVar)
+
 if __name__ == '__main__':
     unittest.main()

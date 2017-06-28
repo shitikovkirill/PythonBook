@@ -1,5 +1,16 @@
 
 def send_email(user, pwd, recipient, subject, body):
+    """
+    Send mail using smtp.gmail.com
+
+    :param user: who send mail
+    :param pwd:  password from this mail
+    :param recipient:  who get mail
+    :param subject: title
+    :param body: text
+    :return:
+    """
+
     import smtplib
 
     gmail_user = user
@@ -22,11 +33,12 @@ def send_email(user, pwd, recipient, subject, body):
         print('successfully sent the mail')
     except:
         print("failed to send mail")
+if __name__ == '__main__':
 
-user = 'superliv.no@gmail.com'
-pwd = '**********'
-recipient = 'sh.kiruh@gmail.com'
-subject = 'The contents of %s'
-body = 'text'
+    user = 'superliv.no@gmail.com'
+    pwd = '**********'
+    recipient = 'sh.kiruh@gmail.com'
+    subject = 'The contents of %s'
+    body = 'text'
 
-send_email(user, pwd, recipient, subject, body)
+    send_email(user, pwd, recipient, subject, body)
