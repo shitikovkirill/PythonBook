@@ -7,7 +7,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual('spam', a[0])
         self.assertEqual(100, a[2])
         self.assertEqual(100, a[-2])
-        self.assertEqual(['eggs',100], a[1:-1])
+        self.assertEqual(['eggs', 100], a[1:-1])
         self.assertEqual(['spam', 'eggs', 100, 1234], a[:])
 
     def test_deystviya(self):
