@@ -17,10 +17,17 @@ class TestFunctionMethods(unittest.TestCase):
         map_list = map(lambda x, y: x+y, list1, list2)
         self.assertEqual([100, 6, 5, 30, 1], list(map_list))
 
+        list2 = [90, 0, -2]
+        map_list = map(lambda x, y: x + y, list1, list2)
+        self.assertEqual([100, 6, 5], list(map_list))
+
     def test_reduce(self):
         from functools import reduce
         product = reduce((lambda res, y: res * y), [1, 2, 3, 4])
         self.assertEqual(24, product)
+        product = reduce((lambda res, y: res * y), [1, 2, 3, 4], 10)
+        self.assertEqual(240, product)
+
 
 if __name__ == '__main__':
     unittest.main()
