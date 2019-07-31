@@ -17,7 +17,7 @@ class TestEmailMethods(unittest.TestCase):
             Порт POP3 сервера: 110 или 995 (POP3+SSL)
             Порт IMAP сервера: 143 или 993 (IMAP4+SSL)
             mailer_host: mail.ukraine.com.ua
-            mailer_user: admin@med-test.in.ua
+            mailer_user: admin@xxx
             mailer_password: ********
         :return: 
         """
@@ -26,12 +26,12 @@ class TestEmailMethods(unittest.TestCase):
         msg = MIMEText(message)
 
         # me == the sender's email address
-        me = 'admin@med-test.in.ua'
+        me = 'admin@xxxx'
         # you == the recipient's email address
         you = 'sh.kiruh2@gmail.com'
         host = 'mail.ukraine.com.ua'
         port = 25
-        username = 'admin@med-test.in.ua'
+        username = 'admin@xxxx'
         password = '**********'
 
         msg['Subject'] = 'The contents of %s' % message
